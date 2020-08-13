@@ -3,15 +3,16 @@ package modelos;
 import java.util.ArrayList;
 
 public class Profesor {
-    public String codigo;
-    public String nombre;
-    public String apellido;
-    public int edad;
-    public String direccion;
-    public String telefono;
-    public InformacionAdicionalProfesor info;
-    public ArrayList<Paralelo> paralelos;
-
+    private String codigo;
+    private String nombre;
+    private String apellido;
+    private int edad;
+    private String direccion;
+    private String telefono;
+    private ArrayList<Paralelo> paralelos;
+    private int añosdeTrabajo;
+    private String facultad;
+    private double BonoFijo;
     public Profesor(String codigo, String nombre, String apellido, String facultad, int edad, String direccion, String telefono) {
         this.codigo = codigo;
         this.nombre = nombre;
@@ -25,6 +26,88 @@ public class Profesor {
     public void anadirParalelos(Paralelo p){
         paralelos.add(p);
     }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public ArrayList<Paralelo> getParalelos() {
+        return paralelos;
+    }
+
+    public void setParalelos(ArrayList<Paralelo> paralelos) {
+        this.paralelos = paralelos;
+    }
+
+    public int getAñosdeTrabajo() {
+        return añosdeTrabajo;
+    }
+
+    public void setAñosdeTrabajo(int añosdeTrabajo) {
+        this.añosdeTrabajo = añosdeTrabajo;
+    }
+
+    public String getFacultad() {
+        return facultad;
+    }
+
+    public void setFacultad(String facultad) {
+        this.facultad = facultad;
+    }
+
+    public double getBonoFijo() {
+        return BonoFijo;
+    }
+
+    public void setBonoFijo(double BonoFijo) {
+        this.BonoFijo = BonoFijo;
+    }
+    
+    
     
     
 }

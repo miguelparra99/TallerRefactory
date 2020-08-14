@@ -97,13 +97,21 @@ public class Estudiante{
         double notaFinal=0;
         for(Paralelo par:paralelos){
             if(p.equals(par)){
-                double notaTeorico=(nexamen+ndeberes+nlecciones)*0.80;
-                double notaPractico=(ntalleres)*0.20;
-                notaFinal=notaTeorico+notaPractico;
+                
+                notaFinal = notaFinal(nexamen, ndeberes, nlecciones, ntalleres);
             }
         }
         return notaFinal;
     }
+    
+    public double notaFinal(double nexamen, double ndeberes, double nlecciones, double ntalleres){
+    
+     return ((nexamen+ndeberes+nlecciones)*0.80) + ((ntalleres)*0.20);
+             
+    }
+    
+    
+    
     
     //Calcula y devuelve la nota inicial contando examen, deberes, lecciones y talleres. Esta nota es solo el promedio de las dos calificaciones anteriores.
     public double CalcularNotaTotal(Paralelo p){
